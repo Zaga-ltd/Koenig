@@ -20,17 +20,7 @@ module.exports = {
 
         // use the SimpleDOM document to create a raw HTML section.
         // avoids parsing/rendering of potentially broken or unsupported HTML
-        const rawHTMLSecion = dom.createRawHTMLSection(payload.html);
-
-        if (payload.segment) {
-            let segment = dom.createElement('div');
-            segment.setAttribute('data-gh-segment', payload.segment);
-            segment.appendChild(rawHTMLSecion);
-
-            return segment;
-        } else {
-            return rawHTMLSecion;
-        }
+        return dom.createRawHTMLSection(payload.html);
     },
 
     absoluteToRelative(payload, options) {
