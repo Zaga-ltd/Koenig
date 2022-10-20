@@ -20,8 +20,15 @@ const Template = args => (
     </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const Empty = Template.bind({});
+Empty.args = {
+    isSelected: true,
+    value: '',
+    valuePlaceholder: 'Add button text'
+};
+
+export const Value = Template.bind({});
+Value.args = {
     isSelected: true,
     value: 'Subscribe',
     valuePlaceholder: 'Add button text'
