@@ -16,16 +16,16 @@ import UnsplashPlugin from '../components/ui/UnsplashPlugin';
 
 export const ImagePlugin = () => {
     const [editor] = useLexicalComposerContext();
-    const {imageUploader} = React.useContext(KoenigComposerContext);
+    const {fileUploader} = React.useContext(KoenigComposerContext);
     const [selector, setSelector] = React.useState(null);
     const [selectedKey, setSelectedKey] = React.useState(null);
     const [showModal, setShowModal] = React.useState(false);
 
     const handleImageUpload = React.useCallback(async (files, imageNodeKey) => {
         if (files?.length > 0) {
-            return await imageUploadHandler(files, imageNodeKey, editor, imageUploader);
+            return await imageUploadHandler(files, imageNodeKey, editor, fileUploader);
         }
-    }, [imageUploader, editor]);
+    }, [fileUploader, editor]);
 
     React.useEffect(() => {
         if (!editor.hasNodes([ImageNode])){
@@ -87,7 +87,7 @@ export const ImagePlugin = () => {
                 COMMAND_PRIORITY_HIGH
             )
         );
-    }, [editor, imageUploader, handleImageUpload]);
+    }, [editor, fileUploader, handleImageUpload]);
 
     if (showModal && selector) {
         return (<UnsplashPlugin
