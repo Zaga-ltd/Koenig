@@ -14,7 +14,9 @@ const story = {
 export default story;
 
 const Template = args => (
-    <Input {...args} />
+    <div className="w-[240px]">
+        <Input {...args} />
+    </div>
 );
 
 export const Default = Template.bind({});
