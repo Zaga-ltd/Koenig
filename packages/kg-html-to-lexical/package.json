@@ -40,7 +40,9 @@
     "@lexical/html": "^0.12.2",
     "@lexical/link": "^0.12.2",
     "@lexical/list": "^0.12.2",
+    "@lexical/rich-text": "^0.12.2",
     "@tryghost/kg-default-nodes": "^0.2.3",
+    "@tryghost/kg-default-transforms": "^0.0.0",
     "jsdom": "^22.1.0",
     "lexical": "^0.12.2"
   }
