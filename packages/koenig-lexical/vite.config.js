@@ -6,6 +6,13 @@ import svgr from 'vite-plugin-svgr';
 import {defineConfig, esmExternalRequirePlugin, loadEnv} from 'vite';
 import {resolve} from 'path';
 import {sentryVitePlugin} from '@sentry/vite-plugin';
+import { createRequire } from 'module';
+import { createRequire } from 'module';
+
+var require = createRequire(import.meta.url);
+var module = { exports: {} };
+
+const require = createRequire(import.meta.url);
 
 const outputFileName = pkg.name[0] === '@' ? pkg.name.slice(pkg.name.indexOf('/') + 1) : pkg.name;
 
@@ -129,4 +136,3 @@ export default (function viteConfig({mode}) {
             })
         }
     });
-});

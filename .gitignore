@@ -57,13 +57,11 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 
 # IDE
 .idea/*
 *.iml
 *.sublime-*
-.vscode/*
 !.vscode/launch.json
 #!.vscode/settings.json
 
@@ -74,3 +72,4 @@ typings/
 
 # Playwright report
 playwright-report/
+config.bat
