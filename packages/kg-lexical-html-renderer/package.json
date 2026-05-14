@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "dev": "tsc --watch --preserveWatchOutput --sourceMap",
+    "dev": "node api.js && tsc --watch --preserveWatchOutput --sourceMap",
     "clean": "rm -rf build tsconfig.tsbuildinfo",
     "build": "yarn clean && tsc && tsc -p tsconfig.cjs.json && echo '{\"type\":\"module\"}' > build/esm/package.json",
     "prepare": "yarn clean && tsc && tsc -p tsconfig.cjs.json && echo '{\"type\":\"module\"}' > build/esm/package.json",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.39.4",
-    "@types/jsdom": "28.0.1",
+    "@types/jsdom": "28.0.2",
     "@types/mocha": "10.0.10",
     "@types/should": "13.0.0",
     "@types/sinon": "21.0.1",

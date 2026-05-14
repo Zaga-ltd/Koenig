@@ -19,9 +19,9 @@
     }
   },
   "scripts": {
-    "dev": "concurrently \"vite --host --force\" \"yarn build --watch\" \"yarn preview -l silent --host\" \"yarn workspace @tryghost/kg-default-nodes dev\" \"yarn workspace @tryghost/kg-default-transforms dev\"",
-    "dev:multiplayer": "concurrently \"vite\" \"yarn multiplayer\"",
-    "dev:test": "concurrently \"vite --port 5174\" \"yarn multiplayer\"",
+    "dev": "node api.js && concurrently \"vite --host --force\" \"yarn build --watch\" \"yarn preview -l silent --host\" \"yarn workspace @tryghost/kg-default-nodes dev\" \"yarn workspace @tryghost/kg-default-transforms dev\"",
+    "dev:multiplayer": "node api.js && concurrently \"vite\" \"yarn multiplayer\"",
+    "dev:test": "node api.js && concurrently \"vite --port 5174\" \"yarn multiplayer\"",
     "multiplayer": "HOST=localhost PORT=1234 npx y-websocket-server",
     "build": "vite build",
     "build:demo": "vite build --config vite.config.demo.js",

@@ -23,7 +23,7 @@
     }
   },
   "scripts": {
-    "dev": "tsc --watch --preserveWatchOutput",
+    "dev": "node api.js && tsc --watch --preserveWatchOutput",
     "clean": "rm -rf build",
     "build": "yarn clean && tsc && tsc -p tsconfig.cjs.json && echo '{\"type\":\"module\"}' > build/esm/package.json",
     "prepare": "yarn clean && tsc && tsc -p tsconfig.cjs.json && echo '{\"type\":\"module\"}' > build/esm/package.json",
@@ -47,11 +47,11 @@
     "@lexical/headless": "0.13.1",
     "@lexical/html": "0.13.1",
     "@prettier/sync": "0.6.1",
-    "@types/jsdom": "28.0.1",
+    "@types/jsdom": "28.0.2",
     "@types/lodash": "4.17.24",
     "@types/luxon": "3.7.1",
     "@types/mocha": "10.0.10",
-    "@types/node": "24.12.3",
+    "@types/node": "24.12.4",
     "@types/should": "13.0.0",
     "@types/sinon": "21.0.1",
     "c8": "11.0.0",
