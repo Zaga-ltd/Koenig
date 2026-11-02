@@ -19,8 +19,6 @@
     }
   },
   "scripts": {
-    "dev:multiplayer": "node api.js && concurrently \"vite\" \"yarn multiplayer\"",
-    "dev:test": "node api.js && concurrently \"vite --port 5174\" \"yarn multiplayer\"",
     "multiplayer": "HOST=localhost PORT=1234 npx y-websocket-server",
     "build": "vite build",
     "build:demo": "vite build --config vite.config.demo.js",
